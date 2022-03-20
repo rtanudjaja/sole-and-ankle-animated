@@ -27,8 +27,10 @@ const NormalLink = styled.a`
   transition: transform 500ms;
   transform: translateY(0);
 
-  ${Wrapper}:hover & {
-    transform: translateY(-100%);
+  @media (prefers-reduced-motion: no-preference) {
+    ${Wrapper}:hover & {
+      transform: translateY(-100%);
+    }
   }
 `
 
