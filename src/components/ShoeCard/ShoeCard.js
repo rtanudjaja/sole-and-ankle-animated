@@ -90,10 +90,12 @@ const Image = styled.img`
   transform-origin: 50% 90%;
   will-change: transform;
 
-  ${Link}:hover &,
-  ${Link}:focus & {
-    transform: scale(1.1);
-    transition: transform 200ms;
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    ${Link}:hover &,
+    ${Link}:focus & {
+      transform: scale(1.1);
+      transition: transform 200ms;
+    }
   }
 `;
 
